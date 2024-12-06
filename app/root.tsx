@@ -7,6 +7,7 @@ import {
 } from "@remix-run/react";
 import tailwindStylesheetUrl from "./styles/tailwind.css?url";
 import Header from "~/components/Header";
+import circlesUrl from "./images/circles.png?url";
 
 export function links() {
   return [{ rel: "stylesheet", href: tailwindStylesheetUrl }];
@@ -21,7 +22,11 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body style={{
+        backgroundColor: "#DBCDC2",
+        backgroundImage: `url(${circlesUrl})`,
+        backgroundRepeat: "repeat"
+      }}>
         <Header />
         <Outlet />
         <ScrollRestoration />
