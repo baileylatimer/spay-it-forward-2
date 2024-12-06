@@ -4,6 +4,7 @@ import OurImpact from "~/components/OurImpact";
 import OurStory from "~/components/OurStory";
 import HowWeHelp from "~/components/HowWeHelp";
 import ImageGrid from "~/components/ImageGrid";
+import Footer from "~/components/Footer";
 
 export const meta: MetaFunction = () => {
   return [
@@ -16,11 +17,11 @@ export default function Index() {
   return (
     <main>
       <Hero />
-
-      <OurStory />
       <OurImpact />
+      <OurStory />
       <HowWeHelp />
       <ImageGrid />
+      <Footer />
     </main>
   );
 }
