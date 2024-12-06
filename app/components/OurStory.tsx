@@ -44,7 +44,7 @@ export default function OurStory() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="max-w-6xl mx-auto px-4 py-8 md:py-16 relative">
+    <section ref={sectionRef} className="max-w-6xl mx-auto px-4 pt-8 md:pt-16 relative about-us">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="pr-4 md:pr-8">
           <h2 ref={headingRef} className="text-3xl md:text-4xl lg:text-5xl mb-6 md:mb-8 font-serif opacity-0">

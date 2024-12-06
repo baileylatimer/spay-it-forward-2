@@ -1,5 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
 import Hero from "~/components/Hero";
+import OurImpact from "~/components/OurImpact";
 import OurStory from "~/components/OurStory";
 import HowWeHelp from "~/components/HowWeHelp";
 import ImageGrid from "~/components/ImageGrid";
@@ -15,7 +16,9 @@ export default function Index() {
   return (
     <main>
       <Hero />
+
       <OurStory />
+      <OurImpact />
       <HowWeHelp />
       <ImageGrid />
     </main>
