@@ -8,21 +8,26 @@ export default function Hero() {
   const buttonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
+    gsap.set([titleRef.current, subtitleRef.current, buttonRef.current], {
+      opacity: 0,
+      y: 30
+    });
+
     const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
-    tl.from(titleRef.current, {
-      opacity: 0,
-      y: 30,
+    tl.to(titleRef.current, {
+      opacity: 1,
+      y: 0,
       duration: 1
     })
-    .from(subtitleRef.current, {
-      opacity: 0,
-      y: 20,
+    .to(subtitleRef.current, {
+      opacity: 1,
+      y: 0,
       duration: 1
     }, "-=0.5")
-    .from(buttonRef.current, {
-      opacity: 0,
-      y: 20,
+    .to(buttonRef.current, {
+      opacity: 1,
+      y: 0,
       duration: 1
     }, "-=0.7");
 
@@ -52,21 +57,21 @@ export default function Hero() {
           <div className="max-w-2xl">
             <h1 
               ref={titleRef}
-              className="text-4xl md:text-5xl lg:text-6xl font-serif mb-6"
+              className="text-4xl md:text-5xl lg:text-6xl font-serif mb-6 opacity-0"
               style={{ color: "#DBCDC2" }}
             >
               Supporting Animal Welfare in Wayne County
             </h1>
             <p 
               ref={subtitleRef}
-              className="text-lg md:text-xl mb-8"
+              className="text-lg md:text-xl mb-8 opacity-0"
               style={{ color: "#DBCDC2" }}
             >
               Helping stop feline overpopulation through community support and action.
             </p>
             <button
               ref={buttonRef}
-              className="bg-[#DBCDC2] text-black px-8 py-3 rounded-lg text-lg font-medium hover:bg-[#CCB5A3] transition-colors"
+              className="bg-[#DBCDC2] text-black px-8 py-3 rounded-lg text-lg font-medium hover:bg-[#CCB5A3] transition-colors opacity-0"
             >
               Donate
             </button>
