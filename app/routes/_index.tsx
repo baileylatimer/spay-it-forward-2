@@ -17,8 +17,9 @@ export default function Index() {
   return (
     <main>
       <Hero />
-      <OurImpact />
+
       <OurStory />
+      <OurImpact />
       <HowWeHelp />
       <ImageGrid />
       <Footer />
