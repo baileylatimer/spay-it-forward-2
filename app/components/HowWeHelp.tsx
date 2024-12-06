@@ -32,7 +32,7 @@ export default function HowWeHelp() {
 
   return (
     <section className="">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4 mt-24">
         <h2 ref={headingRef} className="text-3xl md:text-4xl lg:text-5xl mb-12 md:mb-16 font-serif text-center">
           How we help
         </h2>

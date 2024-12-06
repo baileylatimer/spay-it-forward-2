@@ -56,14 +56,14 @@ export default function OurStory() {
           </div>
         </div>
         <div className="relative h-[400px] md:h-[600px]">
-          <div ref={image1Ref} className="absolute -left-4 md:-left-8 top-8 z-10 opacity-0">
+          <div ref={image1Ref} className="absolute -left-4 md:-left-8 top-8 z-20 opacity-0">
             <img 
               src={cats6Url} 
               alt="Cat with Santa hat" 
               className="rounded-xl shadow-lg w-full max-w-[280px] md:max-w-[320px]"
             />
           </div>
-          <div ref={image2Ref} className="absolute -right-4 md:-right-8 top-32 z-20 opacity-0">
+          <div ref={image2Ref} className="absolute -right-4 md:-right-8 top-32 z-10 opacity-0">
             <img 
               src={cats5Url} 
               alt="Cats resting together" 
