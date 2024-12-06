@@ -9,9 +9,11 @@ import tailwindStylesheetUrl from "./styles/tailwind.css?url";
 import globalsStylesheetUrl from "./styles/globals.css?url";
 import Header from "~/components/Header";
 import circlesUrl from "./images/circles.png?url";
+import faviconUrl from "./images/favicon.png?url";
 
 export function links() {
   return [
+    { rel: "icon", type: "image/png", href: faviconUrl },
     { rel: "stylesheet", href: globalsStylesheetUrl },
     { rel: "stylesheet", href: tailwindStylesheetUrl }
   ];
