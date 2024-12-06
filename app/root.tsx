@@ -6,11 +6,15 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import tailwindStylesheetUrl from "./styles/tailwind.css?url";
+import globalsStylesheetUrl from "./styles/globals.css?url";
 import Header from "~/components/Header";
 import circlesUrl from "./images/circles.png?url";
 
 export function links() {
-  return [{ rel: "stylesheet", href: tailwindStylesheetUrl }];
+  return [
+    { rel: "stylesheet", href: globalsStylesheetUrl },
+    { rel: "stylesheet", href: tailwindStylesheetUrl }
+  ];
 }
 
 export default function App() {
