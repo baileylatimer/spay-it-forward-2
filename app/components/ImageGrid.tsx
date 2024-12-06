@@ -61,7 +61,7 @@ export default function ImageGrid() {
             className="col-span-2 md:col-span-1 md:row-span-2 md:col-start-2 relative overflow-hidden rounded-xl"
           >
             <img 
-              src={image3Url} 
+              src={image4Url} 
               alt="Cat lounging in sunlight" 
               className="w-full h-[240px] md:h-full object-cover"
             />
@@ -73,7 +73,7 @@ export default function ImageGrid() {
             className="relative overflow-hidden rounded-xl md:col-start-3 md:row-start-1"
           >
             <img 
-              src={image4Url} 
+              src={image3Url} 
               alt="Cat napping on couch" 
               className="w-full h-[240px] md:h-[365px] object-cover"
             />
