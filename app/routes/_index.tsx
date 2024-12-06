@@ -1,4 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
+import { useEffect, useRef } from "react";
+import { gsap } from "~/utils/gsap";
 
 export const meta: MetaFunction = () => {
   return [
@@ -8,9 +10,30 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
+  const titleRef = useRef(null);
+
+  useEffect(() => {
+    // Set initial state
+    gsap.set(titleRef.current, {
+      opacity: 0,
+      y: -50
+    });
+
+    // Animate after component is mounted
+    gsap.to(titleRef.current, {
+      duration: 1,
+      y: 0,
+      opacity: 1,
+      ease: "power3.out",
+      delay: 0.2 // Small delay to ensure proper hydration
+    });
+  }, []);
+
   return (
     <div className="p-8 font-sans leading-relaxed">
-      <h1 className="text-3xl font-bold text-blue-600 mb-4">Welcome to Remix</h1>
+      <h1 ref={titleRef} className="text-3xl font-bold text-blue-600 mb-4 opacity-0">
+        Welcome to Remix
+      </h1>
       <ul className="space-y-2">
         <li>
           <a
